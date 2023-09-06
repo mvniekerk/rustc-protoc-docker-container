@@ -13,6 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+
+      - uses: webfactory/ssh-agent@v0.6.0
+        name: Inject SSH key
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_SSH }}
+
       - name: Dockerhub login
         env:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
