@@ -2,7 +2,7 @@
 FROM rust:1.72
 
 RUN apt-get update
-RUN apt-get install -y git openssh-client libssl-dev pkg-config build-essential
+RUN apt-get install -y git openssh-client libssl-dev pkg-config build-essential libprotobuf-dev
 
 RUN apt-get install -y git openssh-client unzip curl && \
     export PROTOC_VERSION=$(curl -s "https://api.github.com/repos/protocolbuffers/protobuf/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+') && \
