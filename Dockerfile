@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM rust:1.72
+FROM rust:1.85
 
 RUN apt-get update
 RUN apt-get install -y git openssh-client libssl-dev pkg-config build-essential libprotobuf-dev
