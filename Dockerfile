@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM --platform=linux/amd64 rust:1.84-bookworm
+FROM rust:1.85-bookworm
 
 RUN apt-get update
 RUN apt-get install -y git openssh-client libssl-dev pkg-config build-essential libprotobuf-dev
